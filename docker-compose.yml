@@ -10,6 +10,12 @@ services:
       - .:/bookstore
     depends_on:
       - db
+    environment:
+      - "DJANGO_SECRET_KEY=c0o3xue87!q1@el1+#j@96!9uj3me%2ba-mqv1rqae!^6++*$$3"
+      - "DJANGO_DEBUG=True"
+      - "DJANGO_DB_PASS=postgres"
+      - "DJANGO_TIMEZONE=Africa/Nairobi"
+
   db:
     image: postgres:14
     volumes:
